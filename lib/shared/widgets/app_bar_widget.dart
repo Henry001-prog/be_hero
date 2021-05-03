@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 
 class AppBarWidget extends StatelessWidget {
   final bool hideButtonBack;
+  final bool loading;
+  final int countCases;
 
   const AppBarWidget({
     Key key,
     this.hideButtonBack = true,
+    this.countCases = 0,
+    this.loading = false,
   }) : super(key: key);
 
   @override
@@ -29,8 +33,9 @@ class AppBarWidget extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                            text: '43 casos',
-                            style: TextStyle(fontWeight: FontWeight.bold))
+                          text: '$countCases casos',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        )
                       ],
                     ),
                   ),

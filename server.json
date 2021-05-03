@@ -1,0 +1,36 @@
+{
+  "cases": [
+    {
+      "id": "1",
+      "title": "Cadelinha atropelada 1",
+      "ong": "APAD 1",
+      "description": "A cadelinha Jolie foi atropelada por um carro no bairro Santana e teve que passar por uma cirurgia às pressas.",
+      "price": "R$ 120,00 reais",
+      "whatsapp": "5581992680484"
+    },
+    {
+      "id": "2",
+      "title": "Cadelinha atropelada 2",
+      "ong": "APAD 2",
+      "description": "A cadelinha Jolie foi atropelada por um carro no bairro Santana e teve que passar por uma cirurgia às pressas.",
+      "price": "R$ 50,00 reais",
+      "whatsapp": "5581992680484"
+    },
+    {
+      "id": "3",
+      "title": "Cadelinha atropelada 3",
+      "ong": "APAD 3",
+      "description": "A cadelinha Jolie foi atropelada por um carro no bairro Santana e teve que passar por uma cirurgia às pressas.",
+      "price": "R$ 20,00 reais",
+      "whatsapp": "5581992680484"
+    },
+    {
+      "id": "4",
+      "title": "Cadelinha atropelada 4",
+      "ong": "APAD 4",
+      "description": "A cadelinha Jolie foi atropelada por um carro no bairro Santana e teve que passar por uma cirurgia às pressas.",
+      "price": "R$ 180,00 reais",
+      "whatsapp": "5581992680484"
+    }
+  ]
+}

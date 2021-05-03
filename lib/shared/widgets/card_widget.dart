@@ -4,10 +4,22 @@ import 'package:be_hero/details/detais_page.dart';
 
 class CardWidget extends StatelessWidget {
   final bool hasButtonDetails;
+  final String id;
+  final String title;
+  final String ong;
+  final String description;
+  final String price;
+  final String whatsapp;
 
   const CardWidget({
     Key key,
     this.hasButtonDetails = true,
+    this.id = '',
+    this.title = '',
+    this.ong = '',
+    this.description = '',
+    this.price = '',
+    this.whatsapp = '',
   }) : super(key: key);
 
   @override
@@ -66,7 +78,7 @@ class CardWidget extends StatelessWidget {
                     Expanded(
                       flex: 2,
                       child: Text(
-                        'Cadelinha atropelada',
+                        title,
                         style: TextStyle(
                           color: Color(0xFF737380),
                           fontSize: 15,
@@ -75,7 +87,7 @@ class CardWidget extends StatelessWidget {
                     ),
                     Expanded(
                       child: Text(
-                        'APAD',
+                        ong,
                         style: TextStyle(
                           color: Color(0xFF737380),
                           fontSize: 15,
@@ -104,7 +116,7 @@ class CardWidget extends StatelessWidget {
                           height: 10,
                         ),
                         Text(
-                          'A cadelinha Jolie foi atropelada por um carro no bairro Santana e teve que passar por uma cirurgia às pressas.',
+                          description,
                           style: TextStyle(
                             color: Color(0xFF737380),
                             fontSize: 15,
@@ -128,7 +140,7 @@ class CardWidget extends StatelessWidget {
                   height: 10,
                 ),
                 Text(
-                  'R\$ 120,00 reais',
+                  price,
                   style: TextStyle(
                     color: Color(0xFF737380),
                     fontSize: 15,
@@ -145,7 +157,7 @@ class CardWidget extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => DetailsPage(),
+                      builder: (context) => DetailsPage(id: id),
                     ),
                   );
                 },

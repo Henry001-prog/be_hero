@@ -1,8 +1,13 @@
+import 'package:be_hero/shared/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:share_plus/share_plus.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class CardShareWidget extends StatelessWidget {
+  final String description;
+  final String whatsapp;
+
+  const CardShareWidget({Key key, this.description, this.whatsapp})
+      : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -50,55 +55,12 @@ class CardShareWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  width: 132,
-                  child: TextButton(
-                    onPressed: () async =>
-                        await launch("https://wa.me/81992680484?text=Hello"),
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                        Color(0xFFE02041),
-                      ),
-                      shape: MaterialStateProperty.all(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8)),
-                      ),
-                      padding: MaterialStateProperty.all(
-                        EdgeInsets.symmetric(vertical: 16, horizontal: 30),
-                      ),
-                    ),
-                    child: Text(
-                      'WhastApp',
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
+                ButtonWidget(
+                  title: 'WhatsApp',
+                  whatsapp: whatsapp,
+                  description: description,
                 ),
-                Container(
-                  width: 132,
-                  child: TextButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                        Color(0xFFE02041),
-                      ),
-                      shape: MaterialStateProperty.all(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8)),
-                      ),
-                      padding: MaterialStateProperty.all(
-                        EdgeInsets.symmetric(vertical: 16, horizontal: 30),
-                      ),
-                    ),
-                    child: Text(
-                      'E-mail',
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                )
+                ButtonWidget(title: 'E-mail', isWhatsButton: false),
               ],
             )
           ],
